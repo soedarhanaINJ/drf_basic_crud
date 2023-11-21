@@ -1,6 +1,10 @@
 from django.db import models
 
-class Book(models.Model):
-    title = models.CharField(max_length=125)
-    author = models.CharField(max_length=125)
-    publication_date = models.DateField(auto_now_add=True)
+class ToDo(models.Model):
+    title = models.CharField(max_length=125, blank=False)
+    Description = models.CharField(max_length=125, blank=True)
+    post_date = models.DateField(blank=False)
+    done = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title

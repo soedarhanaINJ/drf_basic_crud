@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import ToDoSerializer
+from todolist.serializers import ToDoSerializer
 from todolist.models import ToDo
 
 # CRUD Operations
